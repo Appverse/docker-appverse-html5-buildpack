@@ -23,7 +23,9 @@ EXPOSE 9000
 
 CMD ["grunt", "server"]
 ```
-Supported tags for NodeJS version. 
+
+Supported tags for NodeJS version.
+ * 4.2.2
  * 4.2
 
 ## License
