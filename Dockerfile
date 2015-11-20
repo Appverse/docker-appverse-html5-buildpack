@@ -1,5 +1,5 @@
 # Pull base image.
-FROM node:4
+FROM node:4.2
 MAINTAINER Marcelo Colomer
 
 # Install Bower & Grunt

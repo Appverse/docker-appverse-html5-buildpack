@@ -3,7 +3,7 @@ Appverse-HTML5 Build Dockerfile
 
 [![dockeri.co](http://dockeri.co/appverse/appverse-html5-buildpack/)](https://registry.hub.docker.com/appverse/appverse-html5-buildpack/)
 
-* NodeJS 4
+* NodeJS
 * Bower
 * Grunt (grunt-cli)
 * Java 8 - Included to execute e2e test with Protractor and Selenium.
@@ -23,7 +23,8 @@ EXPOSE 9000
 
 CMD ["grunt", "server"]
 ```
-
+Supported tags for NodeJS version. 
+ * 4.2
 
 ## License
 
