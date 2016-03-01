@@ -1,7 +1,7 @@
 # docker-appverse-html5-buildpack
 Appverse-HTML5 Build Dockerfile
 
-[![dockeri.co](http://dockeri.co/appverse/appverse-html5-buildpack/)](https://registry.hub.docker.com/appverse/appverse-html5-buildpack/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/mashape/kong.svg)](appverse/docker-appverse-html5-buildpack)
 
 * NodeJS
 * Bower
@@ -25,6 +25,7 @@ CMD ["grunt", "server"]
 ```
 
 Supported tags for NodeJS version.
+ * 5
  * 4.2.2
  * 4.2
 
