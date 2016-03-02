@@ -1,7 +1,7 @@
 # docker-appverse-html5-buildpack
 Appverse-HTML5 Build Dockerfile
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/mashape/kong.svg)](appverse/docker-appverse-html5-buildpack)
+[![Docker Pulls](https://img.shields.io/docker/pulls/appverse/docker-appverse-html5-buildpack.svg)](appverse/docker-appverse-html5-buildpack)
 
 * NodeJS
 * Bower
