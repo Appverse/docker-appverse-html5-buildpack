@@ -25,6 +25,7 @@ CMD ["grunt", "server"]
 ```
 
 Supported tags for NodeJS version.
+ * 5.11
  * 5
  * 4.2.2
  * 4.2
