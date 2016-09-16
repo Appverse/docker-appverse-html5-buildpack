@@ -1,25 +1,20 @@
-# Pull base image.
-FROM node:5.11
-MAINTAINER Marcelo Colomer
+FROM node:6-slim
 
-# Install Bower & Grunt
-RUN npm install -g bower grunt-cli && \
-    echo '{ "allow_root": true }' > /root/.bowerrc
+RUN apt-get update && apt-get install -y \
+    bzip2 \
+    git \
+    openjdk-7-jre \
+    && rm -rf /var/lib/apt/lists/*
 
-# Install Java 8.
-RUN apt-get update && apt-get -y install software-properties-common python-software-properties && \
-    echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
-    echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee /etc/apt/sources.list.d/webupd8team-java.list && \
-    apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886 && \
-    apt-get update && \
-    apt-get -y install oracle-java8-installer && \
-    apt-get install oracle-java8-set-default
+RUN git config --global url."https://github.com/".insteadOf "git://github.com/" && \
+    echo '{ "allow_root": true }' > ~/.bowerrc
 
-# Define working directory.
-WORKDIR /data
+RUN npm install -g bower grunt-cli
 
-# Define commonly used JAVA_HOME variable
-ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
+RUN npm install -g phantomjs-prebuilt@^2.1.12
+RUN npm uninstall -g phantomjs-prebuilt
 
-# Define default command.
+RUN npm install -g node-sass
+ENV SASS_BINARY_PATH /usr/local/lib/node_modules/node-sass/vendor/linux-x64-48/binding.node
+
 CMD ["bash"]
